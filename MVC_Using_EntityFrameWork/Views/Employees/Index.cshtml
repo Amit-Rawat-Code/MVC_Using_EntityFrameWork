@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MVC_Using_EntityFrameWork.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.depart_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_dob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.depart_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.emp_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.emp_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.emp_id })
+        </td>
+    </tr>
+}
+
+</table>

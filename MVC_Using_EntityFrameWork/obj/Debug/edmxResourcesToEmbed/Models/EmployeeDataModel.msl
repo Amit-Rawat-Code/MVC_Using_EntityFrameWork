@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="EmployeeContext">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="Models.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="dep_id" ColumnName="dep_id" />
+          <ScalarProperty Name="depart_name" ColumnName="depart_name" />
+          <ScalarProperty Name="isSelected" ColumnName="isSelected" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="Models.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="dep_id" ColumnName="dep_id" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_gender" ColumnName="emp_gender" />
+          <ScalarProperty Name="emp_city" ColumnName="emp_city" />
+          <ScalarProperty Name="emp_dob" ColumnName="emp_dob" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="emp_age" ColumnName="emp_age" />
+          <ScalarProperty Name="emp_salary" ColumnName="emp_salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
